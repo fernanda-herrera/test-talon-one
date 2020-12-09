@@ -5,10 +5,10 @@ function formatPhone() {
     phone_number = phone_number.replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3");
 
 
-    document.getElementById('formatted-phone').innerHTML = "+1" + phone_number;
+    document.getElementById('phone').value = "+1" + phone_number;
   }
   else {
-    document.getElementById('formatted-phone').innerHTML = phone_number;
+    document.getElementById('phone').value = phone_number;
   }
 }
 
@@ -16,9 +16,6 @@ var s = document.getElementById('phone');
 
 s.addEventListener('input', formatPhone);
 s.addEventListener('propertychange', formatPhone);
-
-
-
 
 
 
